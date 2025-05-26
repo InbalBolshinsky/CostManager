@@ -13,9 +13,9 @@ router.get('/about', (req, res) => {
         },
         {
             id: 3,
-            firstname: 'Gal',
-            lastname: 'Mizrachi',
-            birthday: '17-09-2000',
+            firstname: 'Yahel',
+            lastname: 'Nahari',
+            birthday: '25-10-1999',
             marital_status: 'single',
         },
     ]);
