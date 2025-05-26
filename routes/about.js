@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Defines route for retrieving team member information.
+ * @module routes/about
+ */
+
 const express = require('express'); // Import the Express framework
 const router = express.Router(); // Create an Express router instance
 

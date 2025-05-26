@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Defines route for retrieving user details and total costs.
+ * @module routes/users
+ */
+
 const express = require('express'); // Import the Express framework
 const router = express.Router(); // Create an Express router instance
 const User = require('../models/user'); // Import the User model

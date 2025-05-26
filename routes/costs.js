@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Defines routes for adding costs and generating monthly reports.
+ * @module routes/costs
+ */
+
 const express = require('express'); // Import the Express framework
 const router = express.Router(); // Create an Express router instance
 const Cost = require('../models/cost'); // Import the Cost model

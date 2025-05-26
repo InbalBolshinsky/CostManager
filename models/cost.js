@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Mongoose schema and model for cost data.
+ * @module models/cost
+ */
+
 const mongoose = require('mongoose'); // Import Mongoose library for MongoDB interaction
 
 // Define the schema for the "Cost" collection

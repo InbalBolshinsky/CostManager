@@ -1,3 +1,8 @@
+/**
+ * @fileoverview Mongoose schema and model for user data.
+ * @module models/user
+ */
+
 const mongoose = require('mongoose'); // Import Mongoose library for MongoDB interaction
 
 // Define the schema for the "User" collection
