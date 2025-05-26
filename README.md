@@ -28,7 +28,7 @@ The project follows **RESTful design principles**, implements the **computed pat
 ---
 
 ## 📄 **Documentation**
-For detailed documentation and API usage, refer to the [Google Drive Folder](https://drive.google.com/drive/folders/1r0-S5Q8p94ltqEWH3tZytd2wM67fj6aC?usp=drive_link).
+For detailed documentation and API usage, refer to the [Google Drive Folder (TODO)](TODO).
 
 ---
 
@@ -47,6 +47,6 @@ For detailed documentation and API usage, refer to the [Google Drive Folder](htt
 ---
 
 ## 👥 **Authors**
-+ **Gal Mizrachi** - [GitHub Profile](https://github.com/GalMizrachi)
-+ **Yarin Zaroog** - [GitHub Profile](https://github.com/Yarinzaroog)
++ **Inbal Bolshinsky** - [GitHub Profile](https://github.com/InbalBolshinsky)
++ **Yahel Nahari** - [GitHub Profile](https://github.com/Yaheln)
 
