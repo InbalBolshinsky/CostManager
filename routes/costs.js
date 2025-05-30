@@ -30,7 +30,7 @@ router.post('/add', async (req, res) => {
         }
 
         // Create and save the new cost entry
-        const cost = new Cost({ userid, sum, category, description });
+        const cost = new Cost({ userid, sum, category, description, date: req.body.date ? new Date(req.body.date) : new Date() });
         const savedCost = await cost.save();
 
         // Return a success response with the saved data
@@ -82,7 +82,7 @@ router.get('/report', async (req, res) => {
         const costs = await Cost.aggregate([
             {
                 $match: {
-                    userid: id,
+                    userid: parseInt(id),
                     date: {
                         $gte: startDate,
                         $lt: endDate,
