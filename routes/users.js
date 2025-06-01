@@ -11,7 +11,7 @@ const Cost = require('../models/cost'); // Import the Cost model
 // Route: Get user details by ID
 router.get('/:id', async (req, res) => {
     try {
-        const userId = req.params.id.trim(); // Remove leading and trailing spaces from the ID
+        const userId = req.params.id;
 
         // Find the user by ID
         const user = await User.findOne({ id: userId });

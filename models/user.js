@@ -8,7 +8,7 @@ const mongoose = require('mongoose'); // Import Mongoose library for MongoDB int
 // Define the schema for the "User" collection
 const userSchema = new mongoose.Schema({
     id: {
-        type: String,
+        type: Number,
         required: true, // The user ID is mandatory
         unique: true // Ensures that each user has a unique ID
     },

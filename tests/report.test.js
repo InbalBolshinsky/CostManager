@@ -7,7 +7,7 @@ describe('Report API Endpoints', () => {
     it('should return a monthly report for a user', async () => {
         const response = await request(app)
             .get('/api/report')
-            .query({ id: '1', year: '2025', month: '2' }); // Requesting a report for February 2025
+            .query({ id: 123123, year: '2025', month: '5' }); // Requesting a report for February 2025
 
         // Validate response
         expect(response.status).toBe(200); // Ensure status is 200 (OK)
@@ -19,7 +19,7 @@ describe('Report API Endpoints', () => {
     it('should return an empty costs array if no data is found', async () => {
         const response = await request(app)
             .get('/api/report')
-            .query({ id: '1', year: '2024', month: '12' }); // Requesting a report for a user with no data
+            .query({ id: 123123, year: '2024', month: '12' }); // Requesting a report for a user with no data
 
         // Validate response
         expect(response.status).toBe(200); // Ensure status is 200 (OK)

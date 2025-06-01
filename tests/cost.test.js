@@ -8,7 +8,7 @@ describe('Cost API Endpoints', () => {
         const newCost = {
             description: 'clean', // Cost description
             category: 'housing', // Cost category
-            userid: '1', // User ID
+            userid: 1, // User ID
             sum: 200 // Cost amount
         };
 

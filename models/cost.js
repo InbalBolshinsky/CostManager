@@ -18,7 +18,7 @@ const costSchema = new mongoose.Schema({
         // The category must be one of the predefined values
     },
     userid: {
-        type: String,
+        type: Number,
         required: true // The user ID associated with the cost is required
     },
     sum: {
