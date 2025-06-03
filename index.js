@@ -27,11 +27,6 @@ app.use("/api", aboutRoutes); // Route for team/about information
 // Define the port, using the environment variable if available, otherwise default to 3000
 const PORT = process.env.PORT || 3000;
 
-// Optional welcome route for health checks or testing HTML files
-app.get('/', (req, res) => {
-  res.send('API is running');
-});
-
 // Start the server and listen for incoming regit quests
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 

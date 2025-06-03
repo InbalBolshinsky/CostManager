@@ -1,0 +1,35 @@
+https://costmanager-8r4x.onrender.com
+
+testing getting the about
+-------------------------
+url=https://costmanager-8r4x.onrender.com/api/about/
+data.status_code=200
+b'[{"id":322522673,"firstname":"Inbal","lastname":"Bolshinsky","birthday":"06-12-2000","marital_status":"single"},{"id":3,"firstname":"Yahel","lastname":"Nahari","birthday":"25-10-1999","marital_status":"single"}]'
+data.text=[{"id":322522673,"firstname":"Inbal","lastname":"Bolshinsky","birthday":"06-12-2000","marital_status":"single"},{"id":3,"firstname":"Yahel","lastname":"Nahari","birthday":"25-10-1999","marital_status":"single"}]
+[{'id': 322522673, 'firstname': 'Inbal', 'lastname': 'Bolshinsky', 'birthday': '06-12-2000', 'marital_status': 'single'}, {'id': 3, 'firstname': 'Yahel', 'lastname': 'Nahari', 'birthday': '25-10-1999', 'marital_status': 'single'}]
+
+
+testing getting the report - 1
+------------------------------
+url=https://costmanager-8r4x.onrender.com/api/report/?id=123123&year=2025&month=6
+data.status_code=200
+b'{"userid":123123,"year":2025,"month":6,"costs":[{"food":[{"sum":9,"description":"milk","day":1},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3}]},{"health":[]},{"housing":[]},{"sport":[]},{"education":[]}]}'
+data.text={"userid":123123,"year":2025,"month":6,"costs":[{"food":[{"sum":9,"description":"milk","day":1},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3}]},{"health":[]},{"housing":[]},{"sport":[]},{"education":[]}]}
+
+
+
+testing adding cost item
+----------------------------------
+url=https://costmanager-8r4x.onrender.com/api/add/
+data.status_code=200
+b'{"description":"milk 9","category":"food","userid":123123,"sum":8,"date":"2025-06-03T09:27:08.117Z","_id":"683ebfec9d35fb9484f5f4ce","__v":0}'
+
+
+testing getting the report - 2
+------------------------------
+url=https://costmanager-8r4x.onrender.com/api/report/?id=123123&year=2025&month=6
+data.status_code=200
+b'{"userid":123123,"year":2025,"month":6,"costs":[{"food":[{"sum":9,"description":"milk","day":1},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3}]},{"health":[]},{"housing":[]},{"sport":[]},{"education":[]}]}'
+data.text={"userid":123123,"year":2025,"month":6,"costs":[{"food":[{"sum":9,"description":"milk","day":1},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3},{"sum":8,"description":"milk 9","day":3}]},{"health":[]},{"housing":[]},{"sport":[]},{"education":[]}]}
+
+
