@@ -1,9 +1,20 @@
+/**
+ * @fileoverview Test suite for cost-related API endpoints
+ * @module tests/cost
+ */
+
 const request = require('supertest'); // Import Supertest for API testing
 const app = require('../index'); // Import the main application file
 
+/**
+ * @description Test suite for cost-related API endpoints
+ */
 describe('Cost API Endpoints', () => {
 
-    // Test: Creating a new cost entry
+    /**
+     * @description Test case for creating a new cost entry
+     * @test {POST} /api/add
+     */
     it('should create a new cost entry', async () => {
         const newCost = {
             description: 'clean', // Cost description
@@ -25,7 +36,10 @@ describe('Cost API Endpoints', () => {
         expect(response.body.category).toBe(newCost.category); // Ensure category matches
     });
 
-    // Test: Adding a cost entry with a missing required field (validation test)
+    /**
+     * @description Test case for validation of required fields
+     * @test {POST} /api/add
+     */
     it('should return 400 if a required field is missing', async () => {
         const incompleteCost = {
             description: 'Dinner', // Cost description

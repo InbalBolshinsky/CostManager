@@ -8,7 +8,19 @@ const router = express.Router(); // Create an Express router instance
 const Cost = require('../models/cost'); // Import the Cost model
 //const User = require('../models/user'); // Uncomment if you need to use the User model
 
-// Route: Add a new cost
+/**
+ * @description Adds a new cost entry to the database
+ * @route POST /api/add
+ * @param {Object} req.body - Request body containing cost details
+ * @param {number} req.body.userid - User ID associated with the cost
+ * @param {number} req.body.sum - Cost amount
+ * @param {string} req.body.category - Cost category (food, health, housing, sport, education)
+ * @param {string} req.body.description - Cost description
+ * @param {string} [req.body.date] - Optional date of the cost (defaults to current date)
+ * @returns {Object} 200 - Successfully saved cost entry
+ * @returns {Object} 400 - Bad Request (missing required fields)
+ * @returns {Object} 500 - Internal Server Error
+ */
 router.post('/add', async (req, res) => {
     try {
         const { userid, sum, category, description } = req.body;
@@ -45,7 +57,23 @@ router.post('/add', async (req, res) => {
     }
 });
 
-// Route: Get a monthly cost report
+/**
+ * @description Generates a monthly cost report for a specific user
+ * @route GET /api/report
+ * @param {Object} req.query - Query parameters
+ * @param {number} req.query.id - User ID to generate report for
+ * @param {number} req.query.year - Year for the report
+ * @param {number} req.query.month - Month for the report (1-12)
+ * @returns {Object} 200 - Monthly cost report
+ * @returns {Object} 400 - Bad Request (missing required parameters)
+ * @returns {Object} 500 - Internal Server Error
+ * @returns {Object} returns.costs - Array of cost categories with their items
+ * @returns {Object[]} returns.costs[].food - Food category costs
+ * @returns {Object[]} returns.costs[].health - Health category costs
+ * @returns {Object[]} returns.costs[].housing - Housing category costs
+ * @returns {Object[]} returns.costs[].sport - Sport category costs
+ * @returns {Object[]} returns.costs[].education - Education category costs
+ */
 router.get('/report', async (req, res) => {
     try {
         const { id, year, month } = req.query;

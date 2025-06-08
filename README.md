@@ -27,11 +27,6 @@ The project follows **RESTful design principles**, implements the **computed pat
 
 ---
 
-## 📄 **Documentation**
-For detailed documentation and API usage, refer to the [Google Drive Folder (TODO)](TODO).
-
----
-
 ## ✨ **Features**
 + **Add Cost Items**: Allows users to add new cost items with descriptions, categories, and amounts.
 + **Monthly Report**: Retrieve a report for a specific user, with costs categorized by food, health, housing, sport, and education for a given month and year.

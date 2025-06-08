@@ -6,7 +6,16 @@
 const express = require('express'); // Import the Express framework
 const router = express.Router(); // Create an Express router instance
 
-// Route: Get team member details
+/**
+ * @description Retrieves information about team members who developed the project
+ * @route GET /api/about
+ * @returns {Object[]} Array of team member objects
+ * @returns {number} returns[].id - Team member's ID
+ * @returns {string} returns[].firstname - Team member's first name
+ * @returns {string} returns[].lastname - Team member's last name
+ * @returns {string} returns[].birthday - Team member's birthday in DD-MM-YYYY format
+ * @returns {string} returns[].marital_status - Team member's marital status
+ */
 router.get('/about', (req, res) => {
     res.json([
         {

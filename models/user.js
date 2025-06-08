@@ -5,7 +5,19 @@
 
 const mongoose = require('mongoose'); // Import Mongoose library for MongoDB interaction
 
-// Define the schema for the "User" collection
+/**
+ * @typedef {Object} User
+ * @property {number} id - Unique identifier for the user
+ * @property {string} first_name - User's first name
+ * @property {string} last_name - User's last name
+ * @property {Date} birthday - User's date of birth
+ * @property {string} marital_status - User's marital status
+ */
+
+/**
+ * @description Mongoose schema for user data
+ * @type {mongoose.Schema}
+ */
 const userSchema = new mongoose.Schema({
     id: {
         type: Number,
@@ -30,5 +42,8 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-// Export the "User" model, allowing it to be used in other parts of the application
+/**
+ * @description Mongoose model for user data
+ * @type {mongoose.Model<User>}
+ */
 module.exports = mongoose.model('User', userSchema);
