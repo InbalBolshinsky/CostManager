@@ -102,11 +102,11 @@ router.get('/report', async (req, res) => {
 
         console.log('Aggregation Results:', costs);
 
-        // ✅ List of supported cost categories
+        // List of supported cost categories
         const categories = ["food", "health", "housing", "sport", "education"];
 
         // Initialize a report structure with all categories
-        let report = categories.map(category => ({
+        const report = categories.map(category => ({
             [category]: []
         }));
 

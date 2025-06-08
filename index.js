@@ -24,6 +24,9 @@ app.use("/api/users", usersRoutes); // Routes for user-related operations
 app.use("/api", costsRoutes); // Routes for cost-related operations
 app.use("/api", aboutRoutes); // Route for team/about information
 
+// Serve documentation
+app.use('/docs', express.static('docs'));
+
 // Define the port, using the environment variable if available, otherwise default to 3000
 const PORT = process.env.PORT || 3000;
 
