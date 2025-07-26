@@ -35,12 +35,6 @@ The project follows **RESTful design principles**, implements the **computed pat
 
 ---
 
-## 🙌 **Acknowledgments**
-+ Special thanks to the MongoDB Atlas team for providing the database.
-+ Recognition to the Express.js and Mongoose libraries used in this project.
-
----
-
 ## 👥 **Authors**
 + **Inbal Bolshinsky** - [GitHub Profile](https://github.com/InbalBolshinsky)
 + **Yahel Nahari** - [GitHub Profile](https://github.com/Yaheln)
